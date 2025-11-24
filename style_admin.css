@@ -1,0 +1,498 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} /*desain dasar*/
+
+body {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+} /*desain dan mengatur body*/
+
+/* HEADER */
+.navbar {
+  background-color: #ff69b4; /* Pink */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+} /*bagian desain header dan logo*/
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+} /*posisi logo*/
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+} /*ukuran logo*/
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+} /* desain dan mengantur logo teks*/
+
+/* NAVIGASI */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+/*desin bagian daftar menu*/
+.nav-list li {
+  position: relative;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.nav-list a:hover {
+  background-color: #ff1493; /* Pink lebih gelap */
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffb6c1; /* Pink muda */
+  border-radius: 6px;
+  padding: 10px 0;
+  min-width: 150px;
+  display: none;
+  z-index: 100;
+}
+/* desain dan mengantur dropdown dari ukuran,dll*/
+.nav-list li:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  width: 100%;
+}
+
+.dropdown a {
+  display: block;
+  padding: 8px 15px;
+  color: #333; /* Teks gelap untuk dropdown */
+}
+
+.dropdown a:hover {
+  background-color: #ff69b4; /* Pink */
+  color: white;
+} /*desain dan mengantur bagian dropdown*/
+
+/* KONTEN UTAMA */
+.main-content {
+  margin-top: 100px; /* Memberi ruang untuk navbar fixed */
+  padding: 0 20px;
+} /*desain dan mengantur konten utama*/
+
+/* HALAMAN */
+.section {
+  padding: 60px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.section h2 {
+  font-size: 32px;
+  color: #ff69b4; /* Pink */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*desain section*/
+/* TENTANG KAMI */
+.tentang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.tentang-card {
+  background-color: #fff0f5; /* Pink sangat muda */
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tentang-card h3 {
+  color: #ff69b4; /* Pink */
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+/* PRODUK */
+.produk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.produk-card {
+  background-color: #fff0f5; /* Pink sangat muda */
+  border: 2px solid #ffb6c1; /* Pink muda */
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.produk-card:hover {
+  transform: translateY(-5px);
+}
+
+.produk-card h3 {
+  color: #ff69b4; /* Pink */
+  margin-bottom: 10px;
+}
+
+.produk-card p {
+  font-weight: bold;
+  font-size: 18px;
+  color: #ff1493; /* Pink lebih gelap */
+}
+/*desain kotak/card serta mengantur*/
+/* TOMBOL */
+.btn {
+  display: inline-block;
+  background-color: #ff69b4; /* Pink */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff1493; /* Pink lebih gelap */
+}
+
+.btn-reset {
+  background-color: #ffb6c1; /* Pink muda */
+}
+
+.btn-reset:hover {
+  background-color: #ff69b4; /* Pink */
+}
+
+/*desain dan mengantur tombol*/
+
+/* HALAMAN KASIR */
+.kasir-container {
+  display: none;
+  width: 100%;
+  padding: 20px;
+  margin-top: 100px; /* Memberi ruang untuk navbar */
+  margin-bottom: 50px; /* Memberi ruang untuk footer */
+  background-color: #ffffff;
+  z-index: 100; /* Di bawah navbar tapi di atas konten utama */
+  position: relative;
+}
+
+.kasir-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.kasir-header h2 {
+  color: #ff69b4; /* Pink */
+  font-size: 28px;
+}
+
+.kasir-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.formkasir {
+  background-color: #fff0f5; /* Pink sangat muda */
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.formkasir label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ff69b4; /* Pink */
+}
+
+.formkasir input, .formkasir select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 2px solid #ffb6c1; /* Pink muda */
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.produk-list {
+  background-color: #fff0f5; /* Pink sangat muda */
+  padding: 25px;
+  border-radius: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.produk-list h3 {
+  color: #ff69b4; /* Pink */
+  margin-bottom: 15px;
+}
+
+.produk-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ffb6c1; /* Pink muda */
+  cursor: pointer;
+}
+
+.produk-item:hover {
+  background-color: #ffb6c1; /* Pink muda */
+}
+
+.produk-item .nama {
+  font-weight: bold;
+}
+
+.produk-item .harga {
+  color: #ff1493; /* Pink lebih gelap */
+}
+
+.total-display {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff69b4; /* Pink */
+  margin: 20px 0;
+}
+/*bagian desain dan mengatur halaman kasir*/
+
+/* Desain dan mengatur HALAMAN LAPORAN */
+.laporan-container {
+  display: none;
+  width: 100%;
+  padding: 20px;
+  margin-top: 100px; /* Memberi ruang untuk navbar */
+  margin-bottom: 50px; /* Memberi ruang untuk footer */
+  background-color: #ffffff;
+  z-index: 100; /* Di bawah navbar tapi di atas konten utama */
+  position: relative;
+}
+
+.laporan-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.laporan-header h2 {
+  color: #ff69b4; /* Pink */
+  font-size: 28px;
+}
+
+.laporan-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff0f5; /* Pink sangat muda */
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.laporan-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #ffb6c1; /* Pink muda */
+}
+
+.laporan-item:last-child {
+  border-bottom: none;
+}
+
+.laporan-item .label {
+  font-weight: bold;
+  color: #ff69b4; /* Pink */
+}
+
+.laporan-item .value {
+  font-weight: bold;
+}
+
+/* Desain dan mengatur FOOTER */
+.footer {
+  background-color: #ff69b4; /* Pink */
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 50px;
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-info {
+  max-width: 60%;
+}
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.footer-sosmed ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.footer-sosmed img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.footer-sosmed img:hover {
+  transform: scale(1.15);
+}
+
+.copy {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+/* DESAIN DAN MENGATUR POPUP CETAK STRUK */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.struk-content {
+  margin-top: 20px;
+}
+
+.struk-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.struk-header h1 {
+  color: #ff69b4;
+  font-size: 24px;
+}
+
+.struk-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.struk-table td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.struk-table .label {
+  font-weight: bold;
+  width: 40%;
+}
+
+.struk-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.print-btn {
+  display: block;
+  margin: 20px auto 0;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}

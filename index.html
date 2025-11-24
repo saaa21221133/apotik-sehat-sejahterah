@@ -1,0 +1,272 @@
+<!DOCTYPE html> <!--keterangan file html-->
+<html>
+<head>
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--agar layar website menyesuaikan layar devices-->
+  <title>Apotek Sehat Sejahtera</title> <!--menampilkan judul di tab utama-->
+  <link rel="icon" type="image/png" href="logoapotek.png"> <!--menampilkan logo kecil di tab-->
+  <link rel="stylesheet" href="style_admin.css"> <!--memanggil atau menghubungkan file css-->
+</head>
+
+<body>
+  <!-- BAGIAN HEADER / NAVIGASI ATAS -->
+  <header class="navbar"> <!--area navigasi paling atas/head-->
+    <a href="#beranda" onclick="scrollToSection('beranda')"> <!--dapat di klik dan masuk ke area beranda dengan efek scroll yang smooth-->
+      <div class="logo-area"> <!-- tampilan logo dengan menghubungkan dengan css*-->
+        <img src="logoapotek.png" class="logo-img"> <!--file logo-->
+        <h3 class="logo-text">Apotek Sehat Sejahtera</h3> <!--menampilkan subjudul-->
+      </div>
+    </a>
+
+    <nav>
+      <ul class="nav-list">  <!--menyatukan tombol navigasi untuk dihubungkan ke css-->
+        <li><a href="#beranda" onclick="scrollToSection('beranda')">Beranda</a></li> <!--dapat di klik dan masuk ke area beranda dengan efek scroll yang smooth-->
+        
+        <li>
+          <a href="#tentang" onclick="scrollToSection('tentang')">Tentang Kami ▾</a> <!--dapat di klik dan masuk ke area "tentang kami" dengan efek scroll yang smooth-->
+          <ul class="dropdown"> <!--menampilkan beberapa pilihan/submenu-->
+            <li><a href="#berdiri" onclick="scrollToSection('tentang')">Berdiri Sejak</a></li>  <!--dapat di klik dan masuk ke area "berdiri" dengan efek scroll yang smooth-->
+            <li><a href="#lokasi" onclick="scrollToSection('tentang')">Lokasi</a></li> <!--dapat di klik dan masuk ke area "lokasi" dengan efek scroll yang smooth-->
+            <li><a href="#cs" onclick="scrollToSection('tentang')">Customer Service</a></li> <!--dapat di klik dan masuk ke area customer service dengan efek scroll yang smooth-->
+          </ul>
+        </li>
+        
+        <li><a href="#produk" onclick="scrollToSection('produk')">Produk</a></li> <!--dapat di klik dan masuk ke area beranda produk efek scroll yang smooth-->
+        <li><a href="#" onclick="tampilkanKasir()">Kasir</a></li> <!--menampilkan halaman baru kasir (tidak dibawah)-->
+        <li><a href="#" onclick="tampilkanLaporan()">Laporan</a> <!--menampilkan halaman baru laporan (tidak dibawah)--></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-content"> <!--bagian navigasi inti konten website-->
+    <!-- HALAMAN BERANDA -->
+    <section id="beranda" class="section"> <!--Bagian pertama halaman utama.-->
+      <div class="content">  <!-- wadah untuk isi halaman beranda-->
+        <h2>Selamat Datang di Apotek Sehat Sejahtera</h2>
+        <p>
+          Apotek terpercaya yang menyediakan obat-obatan lengkap, harga terjangkau, 
+          dan pelayanan ramah setiap hari.
+        </p> <!--menampilkan kalimat pembuka di beranda website-->
+        <button class="btn" onclick="tampilPromo()">Lihat Promo</button> <!--menampilkan tombol yang dapat ditekan untuk melihat informasi selengkapnya-->
+      </div>
+    </section> 
+
+    <!-- HALAMAN TENTANG KAMI -->
+    <section id="tentang" class="section"> <!--menampilkan bagian section tentang-->
+      <div class="content"> <!-- wadah untuk isi halaman tentang-->
+        <h2>Tentang Kami</h2> <!-- menampilkan subjudul-->
+        <p>
+          <strong>Apotek Sehat Sejahtera</strong> adalah apotek yang telah berdiri sejak tahun 2010, 
+          berkomitmen untuk menyediakan obat-obatan berkualitas dengan harga terjangkau.
+        </p> <!--menampilkan sebuah paragraf dan <strong> berguna untuk menebalkan sebuah kalimat-->
+        <p>
+          Kami memiliki tim farmasi yang profesional dan siap melayani Anda dengan sepenuh hati.
+        </p> <!-- menampilkan sebuah paragraf-->
+        
+        <div class="tentang-grid"> <!-- menampilkan tata letak dalam kotak-->
+          <div class="tentang-card" id="berdiri"> <!--menampilkan kotak 1 -->
+            <h3>Berdiri Sejak</h3> <!-- menampilkan subjud-->
+            <p>15 Juli 2010</p>
+            <p>Didirikan oleh 3 Orang yaitu Bu Patricia.S, Bu Sharon, dan Bu Sandra dengan visi menyediakan obat berkualitas untuk masyarakat.</p>
+          </div> <!-- isi kotak pertama-->
+          
+          <div class="tentang-card" id="lokasi"> <!-- menampilkan kotak 2-->
+            <h3>Lokasi</h3> <!-- menampilkan subjudul-->
+            <p>Jl. Sehat Sejahtera No. 123</p>
+            <p>Kelurahan Sehat, Kecamatan Sejahtera, Kota Sehat 12345</p>
+            <p>Senin - Sabtu (08.00 - 21.00), Minggu (09.00 - 17.00)</p> <!-- menampilkan sebuah info dalam bentuk paragraf-->
+          </div>
+          
+          <div class="tentang-card" id="cs"> <!-- menampilkan sebuah kotak baru informasi berupa customer service-->
+            <h3>Customer Service</h3> <!-- menampilkan sebuah sub judul "cutomer srvice-->
+            <p>Telepon: (021) 1234-5678</p>
+            <p>WhatsApp: 0812-3456-7890</p>
+            <p>Email: info@apoteksehatsejahtera.com</p>
+            <p>Kami siap melayani Anda 24 jam untuk keadaan darurat.</p> <!-- menampilkan sebuah informasi pada masing-masing paragraf-->
+          </div> <!--Penutup dari <div class="tentang-card" id="cs">-->
+        </div> <!--menutup grid-->
+      </div> <!-- menutup wadah bagian tentang-->
+    </section> <!-- menutup section tentang -->
+
+    <!-- HALAMAN PRODUK -->
+    <section id="produk" class="section"> <!--Membuat section baru dengan id "produk" untuk navigasi dan style-->
+      <div class="content"> <!--Container yang menyimpan isi konten produk.-->
+        <h2>Daftar Produk</h2> <!--menampilkan subjudul-->
+        <p>
+          Kami menyediakan berbagai macam obat-obatan dan suplemen kesehatan dengan kualitas terjamin.
+        </p> <!--informasi dalam bentuk paragraf-->
+        
+        <div class="produk-grid"> <!--membuat kotak berisi informasi produk-->
+          <div class="produk-card"> <!--membuat kotak 1-->
+            <h3>Paracetamol 500mg</h3> <!-- subjudul/judul di kotak 1-->
+            <p>Rp 5.000</p> <!--informasi harga-->
+          </div> <!--menutup bagian kotak 1-->
+          <div class="produk-card"> <!--membuat kotak 2-->
+            <h3>Amoxicillin 500mg</h3> <!-- subjudul/judul di kotak 2-->
+            <p>Rp 25.000</p><!--informasi harga-->
+          </div>
+          <div class="produk-card"><!--membuat kotak 3-->
+            <h3>Vitamin C 1000mg</h3><!-- subjudul/judul di kotak 3-->
+            <p>Rp 15.000</p><!--informasi harga-->
+          </div>
+          <div class="produk-card"><!--membuat kotak 4-->
+            <h3>Antasida</h3> <!-- subjudul/judul di kotak 4-->
+            <p>Rp 8.000</p><!--informasi harga-->
+          </div>
+          <div class="produk-card"><!--membuat kotak 5-->
+            <h3>Obat Batuk Herbal</h3><!-- subjudul/judul di kotak 5-->
+            <p>Rp 12.000</p><!--informasi harga-->
+          </div> 
+        </div> 
+      </div> 
+    </section> 
+  </div> 
+
+  <!-- HALAMAN KASIR -->
+  <div id="kasir-container" class="kasir-container">  <!--wadah untuk halaman kasir-->
+    <div class="kasir-header"> <!--header kasir dimulai-->
+      <h2>Kasir Apotek</h2> <!--judul halaman kasir (subjudu)-->
+    </div> <!--menutup header kasir-->
+    
+    <div class="kasir-content"><!--isi konten (wadah) utama kasir-->
+      <div class="formkasir"><!--sebagai wadah input transaksi-->
+        <label>Nama Customer</label> <!--label untuk input nama customer-->
+        <input type="text" id="nama" required> <!-- tempat Input teks untuk nama customer.-->
+        
+        <label>Barang</label> <!--label untuk input barang-->
+        <input type="text" id="barang" required> <!-- tempat Input teks untuk barang.-->
+        
+        <label>Qty</label> <!--label untuk input Qty-->
+        <input type="number" id="qty" required> <!-- tempat Input teks untuk angka qty.-->
+        
+        <label>Harga Satuan</label>  <!--label untuk input harga satuan-->
+        <input type="number" id="harga" required><!-- tempat Input teks untuk harga satuan.-->
+        
+        <div class="total-display">Total: <span id="hasil">Rp 0</span></div> <!--Menampilkan hasil total harga setelah dihitung-->
+        
+        <button class="btn" onclick="prosesTransaksi()">Proses</button> <!--Tombol untuk memproses transaksi.-->
+        <button class="btn" onclick="tampilkanStruk()">Cetak Struk</button> <!--Tombol untuk menampilkan popup struk-->
+        <button class="btn btn-reset" onclick="resetForm()">Reset</button> <!--Tombol untuk mereset form-->
+      </div> <!--Penutup form kasir-->
+      
+      <div class="produk-list"> <!--Kotak daftar produk yang bisa dipilih langsung.-->
+        <h3>Daftar Produk</h3> <!--judul daftar produk (subjudul)-->
+        <div class="produk-item" onclick="pilihProduk('Paracetamol 500mg', 5000)"> <!--otomatis mengisi form kasih jika di klik-->
+          <span class="nama">Paracetamol 500mg</span> <!--nama obat-->
+          <span class="harga">Rp 5.000</span> <!--harga barang-->
+        </div>
+        <div class="produk-item" onclick="pilihProduk('Amoxicillin 500mg', 25000)"> <!--otomatis mengisi form kasih jika di klik-->
+          <span class="nama">Amoxicillin 500mg</span> <!--nama obat-->
+          <span class="harga">Rp 25.000</span><!--harga barang-->
+        </div>
+        <div class="produk-item" onclick="pilihProduk('Vitamin C 1000mg', 15000)"> <!--otomatis mengisi form kasih jika di klik-->
+          <span class="nama">Vitamin C 1000mg</span> <!--nama obat-->
+          <span class="harga">Rp 15.000</span><!--harga barang-->
+        </div>
+        <div class="produk-item" onclick="pilihProduk('Antasida', 8000)"> <!--otomatis mengisi form kasih jika di klik-->
+          <span class="nama">Antasida</span> <!--nama obat-->
+          <span class="harga">Rp 8.000</span><!--harga barang-->
+        </div>
+        <div class="produk-item" onclick="pilihProduk('Obat Batuk Herbal', 12000)"><!--otomatis mengisi form kasih jika di klik-->
+          <span class="nama">Obat Batuk Herbal</span> <!--nama obat-->
+          <span class="harga">Rp 12.000</span><!--harga barang-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HALAMAN LAPORAN -->
+  <div id="laporan-container" class="laporan-container"> <!--wadah untuk halaman laporan-->
+    <div class="laporan-header"> <!--Bagian header laporan-->
+      <h2>Laporan Penjualan</h2> <!--Judul halaman laporan-->
+    </div>
+    
+    <div class="laporan-content"> <!--Isi laporan dimulai-->
+      <div class="laporan-item"> <!--Baris informasi periode laporan-->
+        <span class="label">Periode</span><!--Label keterangan-->
+        <span class="value">November 2025</span><!--Nilai / isi dari laporan-->
+      </div>
+      <div class="laporan-item">  <!--Baris total barang terjual-->
+        <span class="label">Total Barang Terjual</span><!--Label keterangan-->
+        <span class="value"><span id="totalBarang">0</span> item</span>     <!--Nilai dinamis yang akan diupdate lewat JavaScript-->
+      </div>
+      <div class="laporan-item"> <!--Baris total penjualan-->
+        <span class="label">Total Penjualan</span><!--Label keterangan-->
+        <span class="value">Rp <span id="totalPenjualan">0</span></span>  <!--Nilai dinamis total penjualan-->
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP CETAK STRUK -->
+  <div id="popup-overlay" class="popup-overlay"> <!--memunculkan overlay saat cetak struk-->
+    <div class="popup-content"> <!--isi konten popup-->
+      <button class="close-popup" onclick="tutupPopupStruk()">×</button> <!--Tombol X untuk menutup popup-->
+      <div class="struk-content"> <!--wadah struk-->
+        <div class="struk-header"> <!--Header struk berisi nama apotek dan alamat-->
+          <h1>APOTEK SEHAT SEJAHTERA</h1> 
+          <p>Jl. Sehat Sejahtera No. 123</p>
+          <p>Telp: (021) 1234-5678</p> <!--isi informasi header struk-->
+        </div>
+        
+        <table class="struk-table"> <!--Tabel untuk menampilkan informasi struk-->
+          <tr>
+            <td class="label">Nama Customer</td><!--label input--> 
+            <td id="struk-nama">-</td>  <!-- Diisi lewat JavaScript -->
+          </tr>
+          <tr>
+            <td class="label">Nama Obat</td> <!--label input-->
+            <td id="struk-barang">-</td> !-- Diisi lewat JavaScript -->
+          </tr>
+          <tr>
+            <td class="label">Jumlah (Qty)</td><!--label input-->
+            <td id="struk-qty">-</td>!-- Diisi lewat JavaScript -->
+          </tr>
+          <tr>
+            <td class="label">Harga Satuan</td><!--label input-->
+            <td id="struk-harga">-</td>!-- Diisi lewat JavaScript -->
+          </tr>
+          <tr>
+            <td class="label">Total Bayar</td> <!--label input-->
+            <td id="struk-total">-</td>!-- Diisi lewat JavaScript -->
+          </tr>
+        </table>
+        
+        <div class="struk-footer"> <!--bagian footer/bawah struk-->
+          <p>Terima kasih telah berbelanja di Apotek Sehat Sejahtera.</p> 
+          <p>Semoga Lekas Sembuh ❤️</p> <!--kalimat isi footer-->
+        </div>
+        
+        <button class="print-btn" onclick="cetakStruk()">Cetak</button> <!--Tombol untuk mencetak struk-->
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer"> <!--Membuat bagian footer-->
+    <div class="footer-content"> <!--wadah footer-->
+      <div class="footer-info"> <!--informasi dalam footer-->
+        <img src="logoapotek.png" class="footer-logo"> <!--menampilkan Logo apotek-->
+        <p>
+          <strong>Apotek Sehat Sejahtera</strong> menyediakan layanan kebutuhan obat 
+          dan kesehatan dengan standar terbaik.
+        </p> <!--isi footer-->
+      </div>
+      <div class="footer-sosmed"> 
+        <p>Social Media</p> <!-- keterangan sosial media-->
+        <ul>
+          <li><img src="facebook-logo.png"></li>
+          <li><img src="instagram-logo.png"></li>
+          <li><img src="twitter-logo.png"></li>
+        </ul> <!--Daftar icon sosial media-->
+      </div>
+    </div>
+    <p class="copy">
+      © 2025 Apotek Sehat Sejahtera | Kelompok: Sharon 10, Patricia.S 28, Sandra 32 | Kelas: XI.4
+    </p> <!--bagian footer "Copyright."-->
+  </footer>
+
+  <script src="data.js"></script> <!--menghubungkan data js-->
+</body>
+</html>
